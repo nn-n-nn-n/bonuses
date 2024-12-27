@@ -309,3 +309,36 @@ int main()
 	Control();
 	ShowCursor();
 }
+
+#include <iostream>
+ 
+int main()
+{
+	setlocale(LC_ALL, "");
+	int n;
+	std::cin >> n;
+	int n1 = n / 100000;
+	int n2 = n / 10000 % 10;
+	int n3 = n / 1000 % 10;
+	int n4 = n / 100 % 10;
+	int n5 = n / 10 % 10;
+	int n6 = n % 10;
+	if (n>999999)
+	{
+		std::cout << "Нет";
+	}
+	else if (n<0)
+	{
+		std::cout << "Нет";
+	}	
+	
+	else if (n1 + n2 + n3 == n4 + n5 + n6)
+	{
+		std::cout << "Да";
+	}
+	
+	else
+	{
+		std::cout << "Нет";
+	}
+}
